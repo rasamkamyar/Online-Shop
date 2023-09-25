@@ -1,0 +1,45 @@
+.card {
+  @include displayFlex(center, center);
+  flex-direction: column;
+  background-color: $bg--secondary;
+  width: $w-80;
+  height: 600px;
+  margin: 200px auto 0;
+  border-radius: 16px;
+  line-height: 3rem;
+}
+.card img {
+  border-radius: 16px;
+  width: $w-80;
+  margin-top: 1rem;
+  height: 50%;
+}
+
+.card-title {
+  cursor: pointer;
+  text-align: center;
+  width: $w-80;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 16px;
+  color: $font-color;
+  font-size: 0.8rem;
+}
+.card-price {
+  color: $font-color;
+  font-size: 1rem;
+}
+.card button {
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.card-info {
+  width: $w-80;
+  @include displayFlex(space-between, center);
+}
+
+.cat-title {
+  font-weight: 900;
+}

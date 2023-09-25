@@ -1,0 +1,21 @@
+.header {
+  padding: 3%;
+  @include displayFlex(space-between, center);
+  background-color: $bg--primary;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+}
+.navbar {
+    background-color: white;
+    padding: 16px;
+    width: 30%;
+    border: 2px solid grey;
+    border-radius: 16px;
+    @include displayFlex(space-between,center)
+}
+.header a {
+    color: $font-color;
+    color: black;
+}
