@@ -31,15 +31,16 @@
   font-size: 1rem;
 }
 .card button {
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 8px;
 }
 
 .card-info {
-  width: $w-80;
   @include displayFlex(space-between, center);
+  width: $w-80;
 }
 
 .cat-title {
-  font-weight: 900;
+  color: $font-color;
+  font-weight: 700;
 }

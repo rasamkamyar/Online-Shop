@@ -1,0 +1,9 @@
+.footer {
+  background-color: $bg--primary;
+  margin-top: 100px;
+  height: 200px;
+  @include displayFlex(center, center);
+  flex-direction: column;
+  color: $font-color;
+  padding: 2rem;
+}

@@ -1,6 +1,5 @@
 const root = document.querySelector(".root");
 function render() {
-  console.log(PRODUCTS);
   let template = PRODUCTS.map((item) => {
     const { id, title, price, description, category, image, rating } = item;
     return `
@@ -9,14 +8,12 @@ function render() {
     <h1 class="card-title"> ${title}</h1>
     <div class="card-info">
     <h2 class="card-price">PRICE: ${price}</h2>
-    <button><span class="cat-title">CATEGORY:</span> ${category}</button>
+    <div><span class="cat-title">CATEGORY : </span><button>${category}</button></div>
     </div>
     </div>    
     `;
   });
-  console.log(template);
   root.innerHTML = template.join("");
-  console.log(root.innerHTML);
 }
 
 // {
