@@ -12,3 +12,9 @@ function getCategory() {
         .then(json => CATEGORIES = json)
         .then(() => renderCat())
 }
+
+function selectedCategory(selectedOne) {
+    fetch(`https://fakestoreapi.com/products/category/${selectedOne}`)
+        .then(res => res.json())
+        .then(json => console.log(json))
+}

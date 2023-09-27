@@ -19,3 +19,13 @@
     color: $font-color;
     color: black;
 }
+
+.menu {
+  background-color: black;
+  width: 500px;
+  // height: 500px;
+  top: 110px;
+  left: 0;
+  z-index: 5000;
+  position: fixed;
+}

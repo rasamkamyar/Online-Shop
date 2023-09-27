@@ -1,4 +1,5 @@
 const root = document.querySelector(".root");
+const menu = document.querySelector(".menu")
 const cats = document.querySelector(".category-menu")
 
 function render() {
@@ -21,12 +22,10 @@ function render() {
 function renderCat() {
 
   let tempCat = CATEGORIES.map((item) => {
-    return `<img width="64" height="64"
-             src="https://img.icons8.com/cotton/64/menu.png" 
-             alt="menu"
-             class="category-menu"
-             onclick="getCategory(\`${item}\`)" />`
+    return `
+    <p onclick="selectedOne(\`${item}\`)">${item}</p>       
+             `
   })
-  cats.innerHTML = tempCat.join("");
+  menu.innerHTML = tempCat.join("");
 }
 
