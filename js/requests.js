@@ -1,19 +1,14 @@
 let PRODUCTS = [];
 fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((data) => (PRODUCTS = data))
-  .then(() => render());
+    .then((res) => res.json())
+    .then((data) => (PRODUCTS = data))
+    .then(() => render());
 
+let CATEGORIES = []
 
-  
-
-  // fetch('https://fakestoreapi.com/products/categories')
-  // .then(res=>res.json())
-  // .then(json=>console.log(json))
-  
-  
-
-
-  
-
-  
+function getCategory() {
+    fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(json => CATEGORIES = json)
+        .then(() => renderCat())
+}
