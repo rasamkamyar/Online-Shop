@@ -39,6 +39,22 @@ a {
   color: black;
 }
 
+.menu {
+  display: none;
+  background-color: rgba(45, 44, 44, 0.9);
+  position: fixed;
+  color: white;
+  line-height: 1rem;
+  top: 110px;
+  margin: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.show-menu {
+  display: block;
+}
+
 .card {
   display: flex;
   justify-content: center;

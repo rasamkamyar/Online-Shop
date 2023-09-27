@@ -1,6 +1,6 @@
 const root = document.querySelector(".root");
 const menu = document.querySelector(".menu")
-const cats = document.querySelector(".category-menu")
+// const cats = document.querySelector(".menu-category")
 
 function render() {
   let template = PRODUCTS.map((item) => {
@@ -23,9 +23,10 @@ function renderCat() {
 
   let tempCat = CATEGORIES.map((item) => {
     return `
-    <p onclick="selectedOne(\`${item}\`)">${item}</p>       
+    <p class="menu-category" onclick="selectedCategory(\`${item}\`)">${item}</p>       
              `
   })
   menu.innerHTML = tempCat.join("");
+  menu.classList.toggle("show-menu");
 }
 
