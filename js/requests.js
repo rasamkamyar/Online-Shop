@@ -1,3 +1,4 @@
+// fetch for getting main products 
 let PRODUCTS = [];
 fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
@@ -6,6 +7,9 @@ fetch("https://fakestoreapi.com/products")
 
 let CATEGORIES = []
 
+
+
+// fetch for getting category for hamburger menu
 function getCategory() {
     fetch('https://fakestoreapi.com/products/categories')
         .then(res => res.json())
@@ -13,14 +17,20 @@ function getCategory() {
         .then(() => renderCategory())
 }
 
+
+
+// fetch for recognize which category choosen from hamburger menu
 function selectedCategory(selectedOne) {
     fetch(`https://fakestoreapi.com/products/category/${selectedOne}`)
         .then(res => res.json())
         .then(json => render(json))
 }
 
-function showItem(selected){
+
+// fetch for selected products when onclick on specific item
+function showItem(selected) {
     fetch(`https://fakestoreapi.com/products/${selected}`)
-            .then(res=>res.json())
-            .then(json=>renderProduct(json))
+        .then(res => res.json())
+        .then(json => renderProduct(json))
 }
+

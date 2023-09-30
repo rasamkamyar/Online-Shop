@@ -44,3 +44,66 @@
   color: $font-color;
   font-weight: 700;
 }
+
+.selected-item{
+ @include displayFlex(space-between,center);
+ width: 99%;
+ border: 15px solid $bg--secondary;
+border-radius: 32px;
+margin: 150px auto;
+height: 60vh;
+gap: 2rem;
+}
+
+.selected-cart-left{
+  @include displayFlex(center,center);
+  flex-direction: column;
+  background-color: white;
+  margin: 0.5rem;
+  height: 90%;
+  width: 50%;
+}
+.selected-item-image{
+  width: 200px;
+  height: 200px;
+}
+
+.selected-item-price{
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: $bg--secondary;
+}
+
+.selected-cart-right{
+color: red;
+margin-right: 1rem;
+}
+.selected-item-title{
+  color: $bg--secondary;
+  font-size: 1.1rem;
+  
+}
+.selected-item-desc{
+  color: $bg--primary;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.selected-item-rate{
+  @include displayFlex(space-around,center);
+  flex-direction: column;
+  color: $bg--primary;
+  font-size: 0.5rem;
+  font-weight: 900;
+  width: 30%;
+  margin: 2rem 0;
+}
+
+.selected-item-button{
+  @include displayFlex(space-between,center);
+}
+.selected-item-button-basket{
+  padding: 1.5rem;
+  border: 5px solid $bg--secondary;
+
+}

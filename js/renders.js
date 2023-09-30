@@ -1,7 +1,6 @@
 const root = document.querySelector(".root");
 const menu = document.querySelector(".menu")
 // const cats = document.querySelector(".menu-category")
-// const root2 = document.querySelector(".root2")
 
 
 function render(data) {
@@ -35,14 +34,24 @@ function renderCategory() {
 function renderProduct(item) {
 
   let temProduct = `
-   <div class="selected">
-  <img src="${item.image}">
-  <h1 onclick="showItem(\`${item.title}\`)" class="card-title"> ${item.title}</h1>
-  <div class="card-info">
-  <h2 class="card-price">PRICE: ${item.price}</h2>
-  <div><span class="cat-title">CATEGORY : </span><button>${item.category}</button></div>
+   <div class="selected-item">
+   <div class="selected-cart-left">
+  <img class="selected-item-image" src="${item.image}">
+  <p class="selected-item-price">PRICE: ${item.price}</p>
+  </div>
+  <div class="selected-cart-right">
+  <h1 class="selected-item-title"> ${item.title}</h1>
+  <p class="selected-item-desc">${item.description}</p>
+  <div class="selected-item-button">
+  <div class="selected-item-rate">
+  <p>${item.rating.rate} From 5 </p>    
+  <p>Comments: ${item.rating.count}</p>
+  <button>${item.category}</button>
+  </div>
+  <button class="selected-item-button-basket">ADD TO BASKET</button>
   </div>
   </div>    
+  </div>
   `;
   root.innerHTML = ""
   root.innerHTML = temProduct
