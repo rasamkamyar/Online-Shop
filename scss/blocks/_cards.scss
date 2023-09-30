@@ -103,7 +103,11 @@ margin-right: 1rem;
   @include displayFlex(space-between,center);
 }
 .selected-item-button-basket{
-  padding: 1.5rem;
-  border: 5px solid $bg--secondary;
+  padding: 1.3rem;
+  background-color: $bg--secondary;
+  // border: 8px solid $bg--secondary;
+  border-radius: 16px;
+  color: $font-color;
+  font-weight: 700;
 
 }

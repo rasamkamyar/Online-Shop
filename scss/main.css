@@ -185,8 +185,11 @@ a {
 }
 
 .selected-item-button-basket {
-  padding: 1.5rem;
-  border: 5px solid rgba(46, 4, 35, 0.9607843137);
+  padding: 1.3rem;
+  background-color: rgba(46, 4, 35, 0.9607843137);
+  border-radius: 16px;
+  color: white;
+  font-weight: 700;
 }
 
 .footer {
