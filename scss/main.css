@@ -61,6 +61,12 @@ a {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: rgba(45, 44, 44, 0.9);
+    height: 100px;
+  }
+}
 .card {
   display: flex;
   justify-content: center;
@@ -192,6 +198,93 @@ a {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(46, 4, 35, 0.9607843137);
+    width: 30%;
+    height: 600px;
+    margin: 200px auto 0;
+    border-radius: 16px;
+    line-height: 3rem;
+  }
+  .selected-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border: 15px solid rgba(46, 4, 35, 0.9607843137);
+    border-radius: 32px;
+    margin: 150px auto;
+    height: 60vh;
+    gap: 2rem;
+  }
+  .selected-cart-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 0.5rem;
+    height: 90%;
+    width: 50%;
+  }
+  .selected-item-image {
+    width: 200px;
+    height: 200px;
+  }
+  .selected-item-price {
+    font-size: 1.5rem;
+    font-weight: 550;
+    color: rgba(46, 4, 35, 0.9607843137);
+  }
+  .selected-cart-right {
+    color: red;
+    margin-right: 1rem;
+  }
+  .selected-item-title {
+    color: rgba(46, 4, 35, 0.9607843137);
+    font-size: 1.3rem;
+  }
+  .selected-item-desc {
+    color: rgba(45, 44, 44, 0.9);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .selected-item-rate {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(45, 44, 44, 0.9);
+    font-size: 0.8rem;
+    font-weight: 900;
+    width: 30%;
+    gap: 0.1rem;
+  }
+  .selected-item-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .selected-item-button-basket {
+    padding: 1.8rem;
+    background-color: rgba(46, 4, 35, 0.9607843137);
+    border-radius: 16px;
+    color: white;
+    font-weight: 700;
+  }
+}
 .footer {
   background-color: rgba(45, 44, 44, 0.9);
   margin-top: 100px;

@@ -8,6 +8,7 @@
   border-radius: 16px;
   line-height: 3rem;
 }
+
 .card img {
   border-radius: 16px;
   width: $w-80;
@@ -26,10 +27,12 @@
   color: $font-color;
   font-size: 0.8rem;
 }
+
 .card-price {
   color: $font-color;
   font-size: 1rem;
 }
+
 .card button {
   padding: 0.2rem;
   border-radius: 8px;
@@ -45,52 +48,56 @@
   font-weight: 700;
 }
 
-.selected-item{
- @include displayFlex(space-between,center);
- width: 99%;
- border: 15px solid $bg--secondary;
-border-radius: 32px;
-margin: 150px auto;
-height: 60vh;
-gap: 2rem;
+.selected-item {
+  @include displayFlex(space-between, center);
+  width: 99%;
+  border: 15px solid $bg--secondary;
+  border-radius: 32px;
+  margin: 150px auto;
+  height: 60vh;
+  gap: 2rem;
 }
 
-.selected-cart-left{
-  @include displayFlex(center,center);
+.selected-cart-left {
+  @include displayFlex(center, center);
   flex-direction: column;
   background-color: white;
   margin: 0.5rem;
   height: 90%;
   width: 50%;
 }
-.selected-item-image{
+
+.selected-item-image {
   width: 200px;
   height: 200px;
 }
 
-.selected-item-price{
+.selected-item-price {
   font-size: 1.5rem;
   font-weight: 550;
   color: $bg--secondary;
 }
 
-.selected-cart-right{
-color: red;
-margin-right: 1rem;
+.selected-cart-right {
+  color: red;
+  margin-right: 1rem;
 }
-.selected-item-title{
+
+.selected-item-title {
   color: $bg--secondary;
   font-size: 1.1rem;
-  
+
 }
-.selected-item-desc{
+
+.selected-item-desc {
   color: $bg--primary;
   font-size: 0.7rem;
   font-weight: 600;
   margin-bottom: 0;
 }
-.selected-item-rate{
-  @include displayFlex(space-around,center);
+
+.selected-item-rate {
+  @include displayFlex(space-around, center);
   flex-direction: column;
   color: $bg--primary;
   font-size: 0.5rem;
@@ -99,15 +106,113 @@ margin-right: 1rem;
   margin: 2rem 0;
 }
 
-.selected-item-button{
-  @include displayFlex(space-between,center);
+.selected-item-button {
+  @include displayFlex(space-between, center);
 }
-.selected-item-button-basket{
+
+.selected-item-button-basket {
   padding: 1.3rem;
   background-color: $bg--secondary;
-  // border: 8px solid $bg--secondary;
   border-radius: 16px;
   color: $font-color;
   font-weight: 700;
 
 }
+
+@media screen and (min-width: 768px) {
+  .root {
+    @include displayFlex(center, center);
+    flex-wrap: wrap;
+
+  }
+
+  .card {
+    @include displayFlex(center, center);
+
+    flex-direction: column;
+    background-color: $bg--secondary;
+    width: 30%;
+    height: 600px;
+    margin: 200px auto 0;
+    border-radius: 16px;
+    line-height: 3rem;
+  }
+
+  ;
+
+  .selected-item {
+    @include displayFlex(space-between, center);
+    width: $w-80;
+    border: 15px solid $bg--secondary;
+    border-radius: 32px;
+    margin: 150px auto;
+    height: 60vh;
+    gap: 2rem;
+  }
+
+  .selected-cart-left {
+    @include displayFlex(center, center);
+    flex-direction: column;
+    background-color: white;
+    margin: 0.5rem;
+    height: 90%;
+    width: 50%;
+  }
+
+  .selected-item-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .selected-item-price {
+    font-size: 1.5rem;
+    font-weight: 550;
+    color: $bg--secondary;
+  }
+
+  .selected-cart-right {
+    color: red;
+    margin-right: 1rem;
+  }
+
+  .selected-item-title {
+    color: $bg--secondary;
+    font-size: 1.3rem;
+
+  }
+
+  .selected-item-desc {
+    color: $bg--primary;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .selected-item-rate {
+    @include displayFlex(space-around, center);
+    flex-direction: column;
+    color: $bg--primary;
+    font-size: 0.8rem;
+    font-weight: 900;
+    width: 30%;
+    gap: 0.1rem;
+    //  margin: 5rem 5rem;
+  }
+
+
+  .selected-item-button {
+    @include displayFlex(space-around, center);
+  }
+
+  .selected-item-button-basket {
+    padding: 1.8rem;
+    background-color: $bg--secondary;
+    border-radius: 16px;
+    color: $font-color;
+    font-weight: 700;
+
+  }
+
+}
+
+;

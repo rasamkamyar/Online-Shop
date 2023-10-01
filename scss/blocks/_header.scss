@@ -48,10 +48,19 @@
   cursor: pointer;
 }
 
-.menu-category:hover{
+.menu-category:hover {
   color: yellow;
   font-size: 1.5rem;
 }
+
 .show-menu {
   display: block;
 }
+
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: $bg--primary;
+    height: 100px;
+  };
+};
