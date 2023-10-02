@@ -34,3 +34,18 @@ function showItem(selected) {
         .then(json => renderProduct(json))
 }
 
+let CART = []
+fetch('https://fakestoreapi.com/carts/1')
+    .then(res => res.json())
+    .then(json => json.products.map((current) => {
+        fetch(`https://fakestoreapi.com/products/${current.productId}`)
+            .then(res => res.json())
+            .then((result) => {
+                console.log(result)
+                CART.push
+                    (`
+                    <h1>${result.title}</h1>
+                    `)
+            });
+    }))
+    .then(() => renderBasketBtn(CART))

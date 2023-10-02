@@ -1,7 +1,7 @@
 const root = document.querySelector(".root");
 const menu = document.querySelector(".menu");
-const basket = document.querySelector(".selected-item-button-basket");
-
+let basketRoot = document.querySelector(".basket-root")
+let basket;
 
 function render(data) {
   let template = data.map((item) => {
@@ -48,7 +48,7 @@ function renderProduct(item) {
    <p>Comments: ${item.rating.count}</p>
   <button onclick = "selectedCategory(\`${item.category}\`)">${item.category}</button>
   </div>
-  <button onclick="addToBasket()" class="selected-item-button-basket">ADD TO BASKET</button>
+  <button class="selected-item-button-basket">ADD TO BASKET</button>
   </div>
   </div>    
   </div>
@@ -57,9 +57,14 @@ function renderProduct(item) {
   root.innerHTML = temProduct;
 
 
+  basket = document.querySelector("button.selected-item-button-basket");
+  basket.addEventListener("click", addToBasket);
 }
 
-// basket.document.addEventListener("click" , addToBasket);
+function renderBasketBtn(items) {
+  basketRoot.innerHTML = items.join("");
+}
+
 
 
 function addToBasket() {
